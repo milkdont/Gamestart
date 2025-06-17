@@ -74,7 +74,7 @@ export const InitialModal=()=>{
 
     return(
         <Dialog open>
-          <DialogContent className="bg-white text-black p-0 overflow-hidden">
+          <DialogContent className="bg-white text-black p-0 overflow-hidden fixed top-0.5 ">
              <DialogHeader className="pt-8 px-6">
                 <DialogTitle className="text-2xl text-center font-bold">
                     Customize your server

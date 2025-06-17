@@ -13,7 +13,7 @@ const SetupPage = async () => {
 
   const server = await db.server.findFirst({
     where: {
-      member: { 
+      members: { 
         some: {
           profileId: profile.id
         }
@@ -22,7 +22,7 @@ const SetupPage = async () => {
   });
 
   if (server) {
-    return redirect(`/servers/@${server.id}`);
+    return redirect(`/servers/${server.id}`);
   }
 
   return <InitialModal/>

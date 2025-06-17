@@ -27,7 +27,7 @@ const InviteCodePage = async ({
 const existingServer = await db.server.findFirst({
   where: {
     inviteCode: params.inviteCode,
-    member: {
+    members: {
       some: {
         profileId: profile.id
       }
@@ -45,7 +45,7 @@ const server = await db.server.update({
     inviteCode: params.inviteCode,
   },
   data: {
-    member: {
+    members: {
       create: [
         {
           profileId: profile.id,
